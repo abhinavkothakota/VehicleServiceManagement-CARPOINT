@@ -18,37 +18,37 @@ let products = [
         id: 1,
         name: 'PPF- Paint Protection Film',
         image: 'ppf.png',
-        price: "$120"
+        price: 12000
     },
     {
         id: 2,
         name: '3M Car Rubbing & Polishing',
         image: '3m.PNG',
-        price: "$130"
+        price: 13000
     },
     {
         id: 3,
         name: 'Ceramic Coating',
         image: 'cera.PNG',
-        price: "$150"
+        price: 15000
     },
     {
         id: 4,
         name: "Meguiar's Ceramic Coating",
         image: 'megce.PNG',
-        price: "$170"
+        price: 17000
     },
     {
         id: 5,
         name: '3M Tefon Coating',
         image: 'tef.PNG',
-        price: "$220"
+        price: 22000
     },
     {
         id: 6,
         name: "Meguiar's Teflon Coating",
         image: 'megtef.PNG',
-        price: "$169"
+        price: 16000
     }
 ];
 let listCards  = [];

@@ -18,37 +18,37 @@ let products = [
         id: 1,
         name: 'Handbrake Wire Replacement',
         image: 'wire.png',
-        price: "$210"
+        price: 21000
     },
     {
         id: 2,
         name: 'Front Brake Pads',
         image: 'fbrake.PNG',
-        price: "$300"
+        price: 30000
     },
     {
         id: 3,
         name: 'Rear Brake Shoes',
         image: 'rbrake.PNG',
-        price: "$220"
+        price: 22000
     },
     {
         id: 4,
         name: 'Front Brake Discs',
         image: 'fdisk.PNG',
-        price: "$129"
+        price: 12900
     },
     {
         id: 5,
         name: 'Caliper Pin Replacement',
         image: 'caliperpins.PNG',
-        price: "$320"
+        price: 32000
     },
     {
         id: 6,
         name: 'Disc Turning',
         image: 'disc.PNG',
-        price: "$190"
+        price: 19000
     }
 ];
 let listCards  = [];

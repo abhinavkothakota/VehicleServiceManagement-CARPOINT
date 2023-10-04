@@ -18,37 +18,37 @@ let products = [
         id: 1,
         name: 'Wind Sheild Replacement',
         image: 'winr.png',
-        price: "$400"
+        price: 40000
     },
     {
         id: 2,
         name: 'Front Headlight Replacemnet',
         image: 'fl.PNG',
-        price: "$120"
+        price: 12000
     },
     {
         id: 3,
         name: 'Side Window Replacement',
         image: 'win.PNG',
-        price: "$220"
+        price: 22000
     },
     {
         id: 4,
         name: 'Rear Headlamp Replacement',
         image: 'rl.PNG',
-        price: "$123"
+        price: 12300
     },
     {
         id: 5,
         name: 'Fog Lamp Replacement',
         image: 'fog.PNG',
-        price: "$320"
+        price: 32000
     },
     {
         id: 6,
         name: 'Side mirror Replacement',
         image: 'mir.PNG',
-        price: "$120"
+        price: 12000
     }
 ];
 let listCards  = [];

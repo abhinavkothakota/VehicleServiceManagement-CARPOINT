@@ -18,37 +18,37 @@ let products = [
         id: 1,
         name: 'Door Replacement',
         image: 'd.png',
-        price: "$220"
+        price: 22000
     },
     {
         id: 2,
         name: 'Front Bumper',
         image: 'fb.PNG',
-        price: "$250"
+        price: 25000
     },
     {
         id: 3,
         name: 'Rear Bumper',
         image: 'rb.PNG',
-        price: "$220"
+        price: 22000
     },
     {
         id: 4,
         name: 'Bonnet Replacement',
         image: 'b.PNG',
-        price: "$230"
+        price: 23000
     },
     {
         id: 5,
         name: 'Boot Replacement',
         image: 'boot.PNG',
-        price: "$320"
+        price: 32000
     },
     {
         id: 6,
         name: 'Fender Replacement',
         image: 'lf.PNG',
-        price: "$259"
+        price: 25900
     }
 ];
 let listCards  = [];

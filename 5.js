@@ -18,37 +18,37 @@ let products = [
         id: 1,
         name: 'Winter Care Package',
         image: 'winter.png',
-        price: '$150'
+        price: 15000
     },
     {
         id: 2,
         name: 'Interior Spa',
         image: 'insp.PNG',
-        price: '$120'
+        price: 12000
     },
     {
         id: 3,
         name: 'Deep All Round Spa',
         image: 'all.PNG',
-        price: '$220'
+        price: 22000
     },
     {
         id: 4,
         name: 'Car Rubbing & Polishing',
         image: 'rub.PNG',
-        price: '$130'
+        price: 13000
     },
     {
         id: 5,
         name: 'Rat/Pest Repellent Treatment',
         image: 'rat.PNG',
-        price: '$320'
+        price: 32000
     },
     {
         id: 6,
         name: 'Diagnostics',
         image: 'inps.PNG',
-        price: '$100'
+        price: 10000
     }
 ];
 let listCards  = [];
