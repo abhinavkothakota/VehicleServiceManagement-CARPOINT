@@ -23,31 +23,31 @@ let products = [
     {
         id: 2,
         name: 'Interior Spa',
-        image: 'insp.PNG',
+        image: 'insp.png',
         price: 12000
     },
     {
         id: 3,
         name: 'Deep All Round Spa',
-        image: 'all.PNG',
+        image: 'all.png',
         price: 22000
     },
     {
         id: 4,
         name: 'Car Rubbing & Polishing',
-        image: 'rub.PNG',
+        image: 'rub.png',
         price: 13000
     },
     {
         id: 5,
         name: 'Rat/Pest Repellent Treatment',
-        image: 'rat.PNG',
+        image: 'rat.png',
         price: 32000
     },
     {
         id: 6,
         name: 'Diagnostics',
-        image: 'inps.PNG',
+        image: 'inps.png',
         price: 10000
     }
 ];

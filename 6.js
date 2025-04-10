@@ -23,31 +23,31 @@ let products = [
     {
         id: 2,
         name: 'Front Headlight Replacemnet',
-        image: 'fl.PNG',
+        image: 'fl.png',
         price: 12000
     },
     {
         id: 3,
         name: 'Side Window Replacement',
-        image: 'win.PNG',
+        image: 'win.png',
         price: 22000
     },
     {
         id: 4,
         name: 'Rear Headlamp Replacement',
-        image: 'rl.PNG',
+        image: 'rl.png',
         price: 12300
     },
     {
         id: 5,
         name: 'Fog Lamp Replacement',
-        image: 'fog.PNG',
+        image: 'fog.png',
         price: 32000
     },
     {
         id: 6,
         name: 'Side mirror Replacement',
-        image: 'mir.PNG',
+        image: 'mir.png',
         price: 12000
     }
 ];

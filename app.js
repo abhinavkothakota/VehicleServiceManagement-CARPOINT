@@ -23,13 +23,13 @@ let products = [
     {
         id: 2,
         name: '3M Car Rubbing & Polishing',
-        image: '3m.PNG',
+        image: '3m.png',
         price: 13000
     },
     {
         id: 3,
         name: 'Ceramic Coating',
-        image: 'cera.PNG',
+        image: 'cera.png',
         price: 15000
     },
     {
@@ -41,13 +41,13 @@ let products = [
     {
         id: 5,
         name: '3M Tefon Coating',
-        image: 'tef.PNG',
+        image: 'tef.png',
         price: 22000
     },
     {
         id: 6,
         name: "Meguiar's Teflon Coating",
-        image: 'megtef.PNG',
+        image: 'megtef.png',
         price: 16000
     }
 ];

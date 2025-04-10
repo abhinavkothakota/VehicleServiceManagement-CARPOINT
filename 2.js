@@ -23,31 +23,31 @@ let products = [
     {
         id: 2,
         name: 'Front Bumper',
-        image: 'fb.PNG',
+        image: 'fb.png',
         price: 25000
     },
     {
         id: 3,
         name: 'Rear Bumper',
-        image: 'rb.PNG',
+        image: 'rb.png',
         price: 22000
     },
     {
         id: 4,
         name: 'Bonnet Replacement',
-        image: 'b.PNG',
+        image: 'b.png',
         price: 23000
     },
     {
         id: 5,
         name: 'Boot Replacement',
-        image: 'boot.PNG',
+        image: 'boot.png',
         price: 32000
     },
     {
         id: 6,
         name: 'Fender Replacement',
-        image: 'lf.PNG',
+        image: 'lf.png',
         price: 25900
     }
 ];

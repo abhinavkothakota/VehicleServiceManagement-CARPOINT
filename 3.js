@@ -17,37 +17,37 @@ let products = [
     {
         id: 1,
         name: 'Suspension Lowerarm Replacement',
-        image: 'lower.png',
+       
         price: 12000
     },
     {
         id: 2,
         name: 'Rear Shock Absorber Replacement',
-        image: 'resh.PNG',
+        image: 'resh.png',
         price: 12000
     },
     {
         id: 3,
         name: 'Front Shock Absorber Replacement',
-        image: 'sus.PNG',
+        image: 'sus.png',
         price: 22000
     },
     {
         id: 4,
         name: 'Steering Rack Repair',
-        image: 'rack.PNG',
+        image: 'rack.png',
         price: 15000
     },
     {
         id: 5,
         name: 'EPS Module Repair',
-        image: 'ecu.PNG',
+        image: 'ecu.png',
         price: 32000
     },
     {
         id: 6,
         name: 'Link Rod Replacement',
-        image: 'links.PNG',
+        image: 'links.png',
         price: 12000
     }
 ];

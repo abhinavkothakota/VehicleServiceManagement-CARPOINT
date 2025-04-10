@@ -23,31 +23,31 @@ let products = [
     {
         id: 2,
         name: 'Front Brake Pads',
-        image: 'fbrake.PNG',
+        image: 'fbrake.png',
         price: 30000
     },
     {
         id: 3,
         name: 'Rear Brake Shoes',
-        image: 'rbrake.PNG',
+        image: 'rbrake.png',
         price: 22000
     },
     {
         id: 4,
         name: 'Front Brake Discs',
-        image: 'fdisk.PNG',
+        image: 'fdisk.png',
         price: 12900
     },
     {
         id: 5,
         name: 'Caliper Pin Replacement',
-        image: 'caliperpins.PNG',
+        image: 'caliperpins.png',
         price: 32000
     },
     {
         id: 6,
         name: 'Disc Turning',
-        image: 'disc.PNG',
+        image: 'disc.png',
         price: 19000
     }
 ];
