@@ -35,22 +35,16 @@
 							<hr id="Indicator">
 						</div>
 						<form id="LoginForm">
-							<input type="text" placeholder="Username
-							">
-							<input type="password" placeholder="Password">
-							<br><br><a href="index.html"
-							button type="submit" class="btn">Login</a>
+							<input type="text" placeholder="Username" id="username">
+							<input type="password" placeholder="Password" id="password">
+							<button type="button" onclick="validateLogin()" class="btn">Login</button>
 							<a href=""><br><br>Forgot password?</a>
 						</form>
 						<form id="RegForm">
-							<input type="text" placeholder="Username
-							">
-							<input type="email" placeholder="Email
-							">
-							<input type="password" placeholder="Password">
-							<br><br><a href="index.html"
-							button type="submit" class="btn">Register</a>
-							
+							<input type="text" placeholder="Username" id="reg-username">
+							<input type="email" placeholder="Email" id="reg-email">
+							<input type="password" placeholder="Password" id="reg-password">
+							<button type="button" onclick="registerUser()" class="btn">Register</button>
 						</form>
 						
 					</div>
@@ -113,9 +107,77 @@
 			}
 
 			function login(){
-				RegForm.style.transform = "translateX(300px)"
+				RegForm.style.transform = "translateX(-300px)"
 				LoginForm.style.transform = "translateX(300px)"
 				Indicator.style.transform = "translateX(0px)"
+			}
+
+			function validateLogin() {
+				var username = document.getElementById("username").value;
+				var password = document.getElementById("password").value;
+				
+				if(username === "admin" && password === "admin123") {
+					// Successful login
+					window.location.href = "index.html";
+				} else {
+					// Check if user exists in localStorage
+					var users = JSON.parse(localStorage.getItem("users")) || [];
+					var userFound = users.find(function(user) {
+						return user.username === username && user.password === password;
+					});
+					
+					if (userFound) {
+						// Registered user login successful
+						window.location.href = "index.html";
+					} else {
+						// Failed login
+						alert("Invalid username or password. Please try again.");
+					}
+				}
+			}
+			
+			function registerUser() {
+				var username = document.getElementById("reg-username").value;
+				var email = document.getElementById("reg-email").value;
+				var password = document.getElementById("reg-password").value;
+				
+				// Simple validation
+				if (!username || !email || !password) {
+					alert("Please fill all fields");
+					return;
+				}
+				
+				// Store user in localStorage
+				var users = JSON.parse(localStorage.getItem("users")) || [];
+				
+				// Check if username already exists
+				var userExists = users.some(function(user) {
+					return user.username === username;
+				});
+				
+				if (userExists) {
+					alert("Username already exists. Please choose another username.");
+					return;
+				}
+				
+				// Add new user
+				users.push({
+					username: username,
+					email: email,
+					password: password
+				});
+				
+				localStorage.setItem("users", JSON.stringify(users));
+				
+				alert("Registration successful! You can now login with your credentials.");
+				
+				// Switch to login form
+				login();
+				
+				// Clear registration form
+				document.getElementById("reg-username").value = "";
+				document.getElementById("reg-email").value = "";
+				document.getElementById("reg-password").value = "";
 			}
 
 	</script>

@@ -96,6 +96,45 @@ function reloadCard(){
     })
     total.innerText = totalPrice.toLocaleString();
     quantity.innerText = count;
+    
+    // Make total price clickable
+    if (count > 0) {
+        total.style.cursor = 'pointer';
+        total.title = 'Click to proceed to checkout';
+        total.addEventListener('click', function() {
+            // Save cart data to localStorage
+            localStorage.setItem('cartItems', JSON.stringify(listCards));
+            localStorage.setItem('cartTotal', totalPrice);
+            // Navigate to checkout page
+            window.location.href = 'checkout.html';
+        });
+    } else {
+        total.style.cursor = 'default';
+        total.title = '';
+        // Remove event listener when cart is empty
+        total.replaceWith(total.cloneNode(true));
+        total = document.querySelector('.total'); // Reselect the element
+    }
+    
+    // Add checkout button if items in cart
+    let checkoutBtn = document.querySelector('.checkoutBtn');
+    if (count > 0) {
+        if (!checkoutBtn) {
+            checkoutBtn = document.createElement('div');
+            checkoutBtn.classList.add('checkoutBtn');
+            checkoutBtn.innerText = 'Proceed to Checkout';
+            checkoutBtn.addEventListener('click', () => {
+                // Save cart data to localStorage
+                localStorage.setItem('cartItems', JSON.stringify(listCards));
+                localStorage.setItem('cartTotal', totalPrice);
+                // Navigate to checkout page
+                window.location.href = 'checkout.html';
+            });
+            document.querySelector('.checkOut').appendChild(checkoutBtn);
+        }
+    } else if (checkoutBtn) {
+        checkoutBtn.remove();
+    }
 }
 function changeQuantity(key, quantity){
     if(quantity == 0){

@@ -121,7 +121,7 @@ header .shopping span{
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
+    grid-template-rows: auto auto;
 }
 .card .checkOut div{
     background-color: white;
@@ -157,4 +157,22 @@ header .shopping span{
 }
 .listCard .count{
     margin: 0 10px;
+}
+
+/* Checkout button styles */
+.checkoutBtn {
+    grid-column: 1 / span 2;
+    background-color: #d90429 !important;
+    color: white !important;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.checkoutBtn:hover {
+    background-color: #b80321 !important;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(217, 4, 41, 0.3);
 }

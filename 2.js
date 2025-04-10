@@ -96,6 +96,57 @@ function reloadCard(){
     })
     total.innerText = totalPrice.toLocaleString();
     quantity.innerText = count;
+    
+    // Make total price clickable
+    if (count > 0) {
+        total.style.cursor = 'pointer';
+        total.title = 'Click to proceed to checkout';
+        total.addEventListener('click', function() {
+            // Save cart data to localStorage
+            localStorage.setItem('cartItems', JSON.stringify(listCards));
+            localStorage.setItem('cartTotal', totalPrice);
+            // Navigate to checkout page
+            window.location.href = 'checkout.html';
+        });
+    } else {
+        total.style.cursor = 'default';
+        total.title = '';
+        // Remove event listener when cart is empty
+        total.replaceWith(total.cloneNode(true));
+        total = document.querySelector('.total'); // Reselect the element
+    }
+    
+    // Always show checkout button, but disable it when cart is empty
+    let checkoutBtn = document.querySelector('.checkoutBtn');
+    if (!checkoutBtn) {
+        checkoutBtn = document.createElement('div');
+        checkoutBtn.classList.add('checkoutBtn');
+        document.querySelector('.checkOut').appendChild(checkoutBtn);
+    }
+    
+    if (count > 0) {
+        checkoutBtn.innerText = 'Proceed to Checkout';
+        checkoutBtn.style.opacity = '1';
+        checkoutBtn.style.cursor = 'pointer';
+        checkoutBtn.style.pointerEvents = 'auto';
+        
+        // Remove existing event listeners
+        checkoutBtn.replaceWith(checkoutBtn.cloneNode(true));
+        checkoutBtn = document.querySelector('.checkoutBtn');
+        
+        checkoutBtn.addEventListener('click', () => {
+            // Save cart data to localStorage
+            localStorage.setItem('cartItems', JSON.stringify(listCards));
+            localStorage.setItem('cartTotal', totalPrice);
+            // Navigate to checkout page
+            window.location.href = 'checkout.html';
+        });
+    } else {
+        checkoutBtn.innerText = 'Cart is Empty';
+        checkoutBtn.style.opacity = '0.5';
+        checkoutBtn.style.cursor = 'not-allowed';
+        checkoutBtn.style.pointerEvents = 'none';
+    }
 }
 function changeQuantity(key, quantity){
     if(quantity == 0){
