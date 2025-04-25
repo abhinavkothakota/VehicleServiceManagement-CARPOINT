@@ -17,7 +17,7 @@ let products = [
     {
         id: 1,
         name: 'Suspension Lowerarm Replacement',
-       
+        image: 'sus.png',
         price: 12000
     },
     {

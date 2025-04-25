@@ -11,7 +11,7 @@
 	box-sizing: border-box;
 }
 /*variables*/
-:roots{
+:root{
 	--main-color:#d90429;
 	--text-color:#020102;
 	--bg-color:#fff;
@@ -146,7 +146,7 @@ header.shadow{
 	color: white;
 	font-size: 1rem;
 	font-weight: 300;
-	padding: 4%;
+	padding: 3%;
 	display: inline-block;
 	transition: all 0.3s ease;
 }
@@ -486,7 +486,7 @@ form a{
 	transition: transform 2s;
 }
 .btn{
-	border-radius: 100px;
+	border-radius: 10px;
 }
 
 /* Search result highlight effect */
@@ -498,4 +498,121 @@ form a{
     0% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.3); }
     70% { box-shadow: 0 0 0 20px rgba(255, 0, 0, 0); }
     100% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    padding: 20px 40px;
+  }
+  .home-text {
+    padding-left: 40px;
+  }
+  .logo {
+    margin-right: 100px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 10px 10px;
+  }
+  .nav {
+    padding: 10px 10px;
+  }
+  .logo {
+    font-size: 2rem;
+    margin-right: 20px;
+  }
+  .navbar {
+    column-gap: 1rem;
+  }
+  .home-text {
+    padding-left: 10px;
+  }
+  .car-container, .parts-container, .blog-container, .footer-container {
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .car-container .box, .parts-container .box, .blog-container .box {
+    max-width: 100%;
+    width: 100%;
+    padding: 10px;
+    height: auto;
+  }
+  .about {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .aboutimg, .about-text {
+    flex: 1 1 100%;
+  }
+  .footer-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+@media (max-width: 300px) {
+  .container {
+    padding: 5px 2vw;
+  }
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 5px;
+  }
+  #menu-icon {
+    display: block;
+    font-size: 2rem;
+  }
+  .navbar {
+    flex-direction: column;
+    width: 100%;
+    row-gap: 0.5rem;
+    column-gap: 0;
+  }
+  .logo {
+    font-size: 1.5rem;
+    margin-right: 0;
+  }
+  .home {
+    min-height: 300px;
+    flex-direction: column;
+    padding: 20px 0;
+  }
+  .home-text h1 {
+    font-size: 1.5rem;
+  }
+  .car-container, .parts-container, .blog-container {
+    gap: 0.5rem;
+  }
+  .car-container .box img, .parts-container .box img {
+    height: 100px;
+  }
+  .footer-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .form-container {
+    width: 95vw;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+
+.car-container .box, .parts-container .box, .blog-container .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 340px;
+    height: 100%;
+}
+.car-container .box .btn,
+.parts-container .box .btn,
+.blog-container .box .btn {
+    margin-top: auto;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
 }

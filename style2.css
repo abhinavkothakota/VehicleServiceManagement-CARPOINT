@@ -19,15 +19,18 @@ body{
     transition: 0.5s;
 }
 header{
-    display: grid;
-    grid-template-columns: 1fr 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-top: 20px;
+    padding: 0 20px;
 }
 .container span{
     color: red;
 }
 .container h1{
-
+    justify-content: center;
+    align-items: center;
     font-size: 50px;
     font-weight: 300;
 }
@@ -175,4 +178,65 @@ header .shopping span{
     background-color: #b80321 !important;
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(217, 4, 41, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    width: 90vw;
+    padding: 10px;
+  }
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card {
+    width: 350px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 98vw;
+    padding: 5px;
+  }
+  .list {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    width: 100vw;
+    left: 100%;
+  }
+  .active .card {
+    left: 0;
+  }
+  header {
+    grid-template-columns: 1fr;
+    margin-top: 10px;
+  }
+  .yc, .container .yc {
+    padding: 2rem;
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 300px) {
+  .container {
+    width: 100vw;
+    padding: 2vw;
+  }
+  .list .item img {
+    height: 200px;
+  }
+  .card {
+    width: 100vw;
+    left: 100%;
+  }
+  .active .card {
+    left: 0;
+  }
+  .container h1 {
+    font-size: 2rem;
+  }
+  .yc, .container .yc {
+    padding: 1rem;
+    font-size: 1rem;
+  }
 }
